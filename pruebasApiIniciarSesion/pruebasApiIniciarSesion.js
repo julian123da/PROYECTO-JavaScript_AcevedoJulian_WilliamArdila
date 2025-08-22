@@ -11,10 +11,12 @@ if(escojerUsuario === "estudiante"){
             try{
                 let datosEstudiantes = JSON.parse(llamadaApiEstudiantes.responseText);
                 for(let i = 0; i < datosEstudiantes.length; i++){
-                    if (datosEstudiantes[i]["clave"] === contrasena && datosEstudiantes[i]["correo"] === correo){
+                    if (datosEstudiantes[i]["clave"] === contrasena && datosEstudiantes[i]["correo"] === correo) {
                         alert("Felicidades")
+                        break;
                     }
-                    else alert("usuario no encontrado")
+                    else alert("usuario no encontrado") ;
+                    break;
                 }
             }
 
