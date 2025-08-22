@@ -1,5 +1,8 @@
 let escojerUsuario = prompt("estudiate, profesor");
 
+
+// Inicio de sesion estudiantes
+
 if(escojerUsuario === "estudiante"){
     let contrasena = prompt("contraseña");
     let correo = prompt("correo");
@@ -27,5 +30,37 @@ if(escojerUsuario === "estudiante"){
         }
     }
     llamadaApiEstudiantes.send();
+
+}
+
+// Inicio de sesion estudiantes
+
+if(escojerUsuario === "profesor"){
+    let contrasena = prompt("contraseña");
+    let correo = prompt("correo");
+
+    let llamadaApiProfesores = new XMLHttpRequest();
+    llamadaApiProfesores.open("GET", "https://68a8a66bb115e67576e978b3.mockapi.io/profesores/datosProfesores")
+    llamadaApiProfesores.onreadystatechange = function(){
+        if(llamadaApiProfesores.readyState === 4 && llamadaApiProfesores.status === 200){
+            try{
+                let datosProfesores = JSON.parse(llamadaApiProfesores.responseText);
+                for(let i = 0; i < datosProfesores.length; i++){
+                    if (datosProfesores[i]["clave"] === contrasena && datosProfesores[i]["correo"] === correo) {
+                        alert("Felicidades")
+                        break;
+                    }
+                    else alert("usuario no encontrado") ;
+                    break;
+                }
+            }
+
+            catch(err){
+
+                console.log(err.message);
+            }
+        }
+    }
+    llamadaApiProfesores.send();
 
 }
