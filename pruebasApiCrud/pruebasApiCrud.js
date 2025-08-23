@@ -8,34 +8,15 @@ if(opcion === "editar"){
     let correo = prompt("correo");
 
     let llamadaApiProfesores = new XMLHttpRequest;
-    llamadaApiProfesores.open("PUT", "https://68a8a66bb115e67576e978b3.mockapi.io/profesores/datosProfesores");
-    llamadaApiProfesores.setRequestHeader("Content-Type", "application/json");
-    llamadaApiProfesores.onreadystatechange = function(){
-        if(llamadaApiProfesores.readyState === 4 && llamadaApiProfesores.status === 200){
-
-            try{
-
-                let datosProfesores = JSON.parse(llamadaApiProfesores.responseText);
-
-                for(i = 0; i < datosProfesores.length; i++){
-                    if(datosProfesores[i]["id"] === idProfesor){
-                        datosProfesores[i]["nombre"] = nombre;
-                        datosProfesores[i]["clave"] = clave;
-                        datosProfesores[i]["correo"] = correo;
-                        alert("f")
-                    }
-                }
-
-            }
-
-            catch(err){
-
-                console.log(err.message);
-            }
-
-        }
+    llamadaApiProfesores.open("PUT", `https://68a8a66bb115e67576e978b3.mockapi.io/profesores/datosProfesores/${idProfesor}`);
+    llamadaApiProfesores.setRequestHeader("Content-Type", "application/json")
+    let profesorEditado = {
+        "nombre":nombre,
+        "clave":clave,
+        "correo":correo
     }
-    llamadaApiProfesores.send();
+    
+    llamadaApiProfesores.send(JSON.stringify(profesorEditado));
 }
 
 
