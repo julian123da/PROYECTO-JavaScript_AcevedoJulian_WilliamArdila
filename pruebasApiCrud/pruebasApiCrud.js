@@ -1,6 +1,6 @@
 let opcion = prompt("crear, eliminar, editar");
 
-if(opcion === "crear"){
+if(opcion === "editar"){
 
     let idProfesor = prompt("idprofesor")
     let nombre = prompt("nombre");
@@ -9,8 +9,9 @@ if(opcion === "crear"){
 
     let llamadaApiProfesores = new XMLHttpRequest;
     llamadaApiProfesores.open("PUT", "https://68a8a66bb115e67576e978b3.mockapi.io/profesores/datosProfesores");
+    llamadaApiProfesores.setRequestHeader("Content-Type", "application/json");
     llamadaApiProfesores.onreadystatechange = function(){
-        if(llamadaApiProfesores.readyState === 400 && llamadaApiEstudiantes.status === 200){
+        if(llamadaApiProfesores.readyState === 4 && llamadaApiProfesores.status === 200){
 
             try{
 
@@ -35,4 +36,28 @@ if(opcion === "crear"){
         }
     }
     llamadaApiProfesores.send();
+}
+
+
+
+
+if(opcion === "crear"){
+
+    
+    let nombre = prompt("nombre");
+    let clave = prompt("clave");
+    let correo = prompt("correo");
+
+    let llamadaApiProfesores = new XMLHttpRequest;
+    llamadaApiProfesores.open("POST", "https://68a8a66bb115e67576e978b3.mockapi.io/profesores/datosProfesores");
+    
+    
+
+     let nuevoProfesor = {
+                    "nombre":nombre,
+                    "clave":clave,
+                    "correo":correo
+                }
+
+    llamadaApiProfesores.send(JSON.stringify(nuevoProfesor));
 }
