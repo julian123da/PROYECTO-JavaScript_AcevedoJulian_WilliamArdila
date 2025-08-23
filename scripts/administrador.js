@@ -26,6 +26,9 @@ crearEstudiante.addEventListener("click", function () {
         if (llamadaApiEstudiantes.readyState === 4) {
             if (llamadaApiEstudiantes.status === 201) {
                 alert("Estudiante Creado");
+                inputNombreEstudiante.value = ""
+                inputCorreoEstudiante.value = ""
+                inputClaveEstudiante.value = ""
             } 
         }
     };
