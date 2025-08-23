@@ -1,5 +1,6 @@
 const botonEstudiante = document.getElementById("botonEstudiante")
 const botonDocente = document.getElementById("botonDocente")
+const botonAdministrador = document.getElementById("botonAdministrador")
 const botonLogin = document.getElementById("botonLogin")
 
 let inputEmail = document.getElementById("inputEmail")
@@ -88,6 +89,8 @@ botonDocente.addEventListener("click", function () {
     })
 })
 
-
+botonAdministrador.addEventListener("click", function(){
+    window.location.href = "../Estudiante/estudiante.html"
+})
 
 
