@@ -30,13 +30,33 @@ h1 {
 
 }
 
-.crudEstudianteProfesor{
-    display: flex;
-    margin-left: 23px;
-   
+h2 {
+    text-align: center;
+    margin-top: 20px;
 }
 
-.crearEstudiante{
+.crudEstudianteProfesor {
     display: flex;
-    gap: 2rem;
+    margin-left: 23px;
+
 }
+
+
+.crearEstudiante {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    border: solid blue;
+    width: 300px;
+    text-align: center;
+}
+
+.crearEstudiante h2 {
+    margin-bottom: 20px;
+    
+  }
+
+  .crearEstudiante input {
+    padding: 10px;
+    margin: 10px;
+  }

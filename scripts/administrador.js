@@ -6,12 +6,13 @@ let inputCorreoEstudiante = document.getElementById("inputCorreoEstudiante")
 let inputClaveEstudiante = document.getElementById("inputClaveEstudiante")
 
 crearEstudiante.addEventListener("click", function () {
-    let nombreEstudiante = inputClaveEstudiante.value
+    let nombreEstudiante = inputNombreEstudiante.value
     let correoEstudiante = inputCorreoEstudiante.value
     let claveEstudiante = inputClaveEstudiante.value
 
     let llamadaApiEstudiantes = new XMLHttpRequest;
-    llamadaApiEstudiantes.open("POST", "https://68a8a66bb115e67576e978b3.mockapi.io/profesores/datosEstudiantes");
+    llamadaApiEstudiantes.open("POST", "https://68a88e91a7e3ec06c2fc4249.mockapi.io/estudiantes/datosEstudiante");
+    llamadaApiEstudiantes.setRequestHeader("Content-Type", "application/json");
 
 
 
@@ -20,6 +21,14 @@ crearEstudiante.addEventListener("click", function () {
         "clave": claveEstudiante,
         "correo": correoEstudiante
     }
+
+    llamadaApiEstudiantes.onreadystatechange = function(){
+        if (llamadaApiEstudiantes.readyState === 4) {
+            if (llamadaApiEstudiantes.status === 201) {
+                alert("Estudiante Creado");
+            } 
+        }
+    };
 
     llamadaApiEstudiantes.send(JSON.stringify(nuevoEstudiante));
 
