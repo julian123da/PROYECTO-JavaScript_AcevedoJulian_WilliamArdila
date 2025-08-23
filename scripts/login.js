@@ -90,7 +90,7 @@ botonDocente.addEventListener("click", function () {
 })
 
 botonAdministrador.addEventListener("click", function(){
-    window.location.href = "../Estudiante/estudiante.html"
+    window.location.href = "../administrador/administrador.html"
 })
 
 
