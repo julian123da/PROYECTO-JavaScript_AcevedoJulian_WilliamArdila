@@ -36,3 +36,43 @@ crearEstudiante.addEventListener("click", function () {
     llamadaApiEstudiantes.send(JSON.stringify(nuevoEstudiante));
 
 })
+
+// Crear Profesor
+
+const crearProfesor = document.getElementById("crearProfesor")
+let inputNombreProfesor = document.getElementById("inputNombreProfesor")
+let inputCorreoProfesor = document.getElementById("inputCorreoProfesor")
+let inputClaveProfesor = document.getElementById("inputClaveProfesor")
+
+crearProfesor.addEventListener("click", function () {
+    let nombreProfesor = inputNombreProfesor.value
+    let correoProfesor = inputCorreoProfesor.value
+    let claveProfesor = inputClaveProfesor.value
+
+    let llamadaApiProfesor = new XMLHttpRequest;
+    llamadaApiProfesor.open("POST", "https://68a8a66bb115e67576e978b3.mockapi.io/profesores/datosProfesores");
+    llamadaApiProfesor.setRequestHeader("Content-Type", "application/json");
+
+
+
+    let nuevoProfesor = {
+        "nombre": nombreProfesor,
+        "clave": claveProfesor,
+        "correo": correoProfesor
+    }
+
+    llamadaApiProfesor.onreadystatechange = function(){
+        if (llamadaApiProfesor.readyState === 4) {
+            if (llamadaApiProfesor.status === 201) {
+                alert("Profesor Creado");
+                inputNombreProfesor.value = ""
+                inputCorreoProfesor.value = ""
+                inputClaveProfesor.value = ""
+            } 
+        }
+    };
+
+    llamadaApiProfesor.send(JSON.stringify(nuevoProfesor));
+
+})
+

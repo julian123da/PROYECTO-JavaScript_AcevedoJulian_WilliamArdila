@@ -38,6 +38,8 @@ h2 {
 .crudEstudianteProfesor {
     display: flex;
     margin-left: 23px;
+    gap: 120px;
+    justify-content: center;
 
 }
 
@@ -60,3 +62,24 @@ h2 {
     padding: 10px;
     margin: 10px;
   }
+
+
+.crearProfesor {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    border: solid blue;
+    width: 300px;
+    text-align: center;
+}
+
+.crearProfesor h2 {
+    margin-bottom: 20px;
+    
+  }
+
+  .crearProfesor input {
+    padding: 10px;
+    margin: 10px;
+  }
+
