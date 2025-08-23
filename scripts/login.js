@@ -10,7 +10,7 @@ botonEstudiante.addEventListener("click", function () {
     document.querySelector(".container2").style.display = "flex";
 
     botonLogin.addEventListener("click", function () {
-        let email = inputEmail.value
+        let email = inputEmail.value.toLowerCase()
         let clave = inputClave.value
 
         let llamadaApiEstudiantes = new XMLHttpRequest();
@@ -26,9 +26,9 @@ botonEstudiante.addEventListener("click", function () {
                             usuarioEncontrado = true
                             break;
                         }
-                       
+
                     }
-                    if(usuarioEncontrado === false){
+                    if (usuarioEncontrado === false) {
                         alert("Usuario no encontrado")
                     }
                 }
@@ -52,6 +52,40 @@ botonEstudiante.addEventListener("click", function () {
 botonDocente.addEventListener("click", function () {
     document.querySelector(".container").style.display = "none";
     document.querySelector(".container2").style.display = "flex";
+
+    botonLogin.addEventListener("click", function(){
+    let email = inputEmail.value.toLowerCase()
+    let clave = inputClave.value
+
+    let llamadaApiProfesores = new XMLHttpRequest();
+    llamadaApiProfesores.open("GET", "https://68a8a66bb115e67576e978b3.mockapi.io/profesores/datosProfesores")
+    llamadaApiProfesores.onreadystatechange = function () {
+        if (llamadaApiProfesores.readyState === 4 && llamadaApiProfesores.status === 200) {
+            try {
+                let datosProfesores = JSON.parse(llamadaApiProfesores.responseText);
+                let usuarioEncontrado = false
+                for (let i = 0; i < datosProfesores.length; i++) {
+                    if (datosProfesores[i]["clave"] === clave && datosProfesores[i]["correo"] === email) {
+                        usuarioEncontrado = true
+                        window.location.href = "../Estudiante/estudiante.html"
+                        break;
+                    }
+
+
+                }
+                if (usuarioEncontrado === false) {
+                    alert("Usuario no encontrado")
+                }
+            }
+
+            catch (err) {
+
+                console.log(err.message);
+            }
+        }
+    }
+    llamadaApiProfesores.send();
+    })
 })
 
 
