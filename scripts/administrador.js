@@ -192,7 +192,7 @@ llamadaApiProfesores.onreadystatechange = function () {
                 <div class="profesores">
                     <p>${datosProfesores[i]["nombre"]}</p>
                     <p>${`id:${datosProfesores[i]["id"]}`}</p>
-                    <a href="#" class="editarProfesor">Editar</a>
+                    <a href="#" class="editarProfesor" data-idProfesor="${datosProfesores[i]["id"]}">Editar</a>
                     <a href="#" class="borrarProfesor" data-idProfesor="${datosProfesores[i]["id"]}">Borrar</a>
                     
                     
@@ -208,7 +208,7 @@ llamadaApiProfesores.onreadystatechange = function () {
             // Borrar Profesor
 
             let botonesDeBorradoProfesores = document.querySelectorAll(".borrarProfesor")
-
+            
 
             botonesDeBorradoProfesores.forEach(function (botonProfesor) {
                 botonProfesor.addEventListener("click", function () {
@@ -233,6 +233,40 @@ llamadaApiProfesores.onreadystatechange = function () {
             // Editar Profesor
 
             let botonesDeEditarProfesores = document.querySelectorAll(".editarProfesor")
+            let cancelarEditarProfesor = document.getElementById("cancelarEditarProfesor")
+
+            botonesDeEditarProfesores.forEach(function (botonEditarProfesor) {
+                botonEditarProfesor.addEventListener("click", function () {
+                    document.querySelector(".modalProfesor").style.display = "block"
+                    let actualizarProfesor = document.getElementById("editarProfesor")
+                    let inputNombreProfesor = document.getElementById("inputActualizarNombreProfesor")
+                    let inputCorreoProfesor = document.getElementById("inputActualizarCorreoProfesor")
+                    let inputClaveProfesor = document.getElementById("inputActualizarClaveProfesor")
+
+                    actualizarProfesor.addEventListener("click", function () {
+                        let nuevoNombreProfesor = inputNombreProfesor.value
+                        let nuevoCorreoProfesor = inputCorreoProfesor.value
+                        let nuevoClaveProfesor = inputClaveProfesor.value
+                        let llamadaApiProfesores = new XMLHttpRequest;
+                        llamadaApiProfesores.open("PUT", `https://68a8a66bb115e67576e978b3.mockapi.io/profesores/datosProfesores/${botonEditarProfesor.dataset.idprofesor}`);
+                        llamadaApiProfesores.setRequestHeader("Content-Type", "application/json")
+                        let profesorEditado = {
+                            "nombre": nuevoNombreProfesor,
+                            "clave": nuevoClaveProfesor,
+                            "correo": nuevoCorreoProfesor
+                        }
+                        document.querySelector(".modalProfesor").style.display = "none"
+                        alert("Profesor Editado")
+
+                        llamadaApiProfesores.send(JSON.stringify(profesorEditado));
+                    })
+
+                    cancelarEditarProfesor.addEventListener("click", function () {
+                        document.querySelector(".modalProfesor").style.display = "none"
+                    })
+                })
+
+            })
 
 
         }
