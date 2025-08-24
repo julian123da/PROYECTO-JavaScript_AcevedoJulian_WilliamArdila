@@ -208,7 +208,7 @@ llamadaApiProfesores.onreadystatechange = function () {
             // Borrar Profesor
 
             let botonesDeBorradoProfesores = document.querySelectorAll(".borrarProfesor")
-            
+
 
             botonesDeBorradoProfesores.forEach(function (botonProfesor) {
                 botonProfesor.addEventListener("click", function () {
@@ -288,7 +288,7 @@ let inputNombreCurso = document.getElementById("inputNombreCurso")
 
 crearCurso.addEventListener("click", function () {
     let nombreCurso = inputNombreCurso.value
-   
+
 
     let llamadaApiCursos = new XMLHttpRequest;
     llamadaApiCursos.open("POST", "https://68ab6ec77a0bbe92cbb785f6.mockapi.io/listaCursos");
@@ -296,7 +296,7 @@ crearCurso.addEventListener("click", function () {
 
 
 
-    let nuevoCurso= {
+    let nuevoCurso = {
         "nombreCurso": nombreCurso,
     }
 
@@ -305,10 +305,27 @@ crearCurso.addEventListener("click", function () {
             if (llamadaApiCursos.status === 201) {
                 alert("Curso Creado");
                 inputNombreCurso.value = ""
+                tarjetasCursos.innerHTML += ` 
             
+
+        
+            <div class="course_card">
+                <div class="course_header course_matematicas">
+                    <h1> "${nombreCurso}"
+                </div>
+                <div class="course_body">
+                    <div class="course_info">10 lecciones</div>
+                    <div class="progress_bar">
+                        <div class="progress_fill_matematicas"></div>
+                    </div>
+                    <button class="enter_button">Entrar</button>
+                </div>
+            </div>`
+
+
             }
         }
-    };
+    }
 
     llamadaApiCursos.send(JSON.stringify(nuevoCurso));
 
@@ -343,7 +360,7 @@ llamadaApiCursos.onreadystatechange = function () {
             // Borrar Cursos
 
             let botonesDeBorradoCursos = document.querySelectorAll(".borrarCursos")
-            
+
 
             botonesDeBorradoCursos.forEach(function (botonCurso) {
                 botonCurso.addEventListener("click", function () {
@@ -375,7 +392,7 @@ llamadaApiCursos.onreadystatechange = function () {
                     document.querySelector(".modalCurso").style.display = "block"
                     let actualizarCurso = document.getElementById("editarCurso")
                     let inputNombreCurso = document.getElementById("inputActualizarNombreCurso")
-                    
+
 
                     actualizarCurso.addEventListener("click", function () {
                         let nuevoNombreCurso = inputNombreCurso.value
@@ -384,7 +401,7 @@ llamadaApiCursos.onreadystatechange = function () {
                         llamadaApiCursos.setRequestHeader("Content-Type", "application/json")
                         let cursoEditado = {
                             "nombreCurso": nuevoNombreCurso,
-                        
+
                         }
                         document.querySelector(".modalCurso").style.display = "none"
                         alert("Curso Editado")

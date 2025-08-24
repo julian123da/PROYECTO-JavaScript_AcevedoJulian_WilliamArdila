@@ -68,7 +68,7 @@ botonDocente.addEventListener("click", function () {
                 for (let i = 0; i < datosProfesores.length; i++) {
                     if (datosProfesores[i]["clave"] === clave && datosProfesores[i]["correo"] === email) {
                         usuarioEncontrado = true
-                        window.location.href = "../Estudiante/estudiante.html"
+                        window.location.href = "../profesor/profesor.html"
                         break;
                     }
 
