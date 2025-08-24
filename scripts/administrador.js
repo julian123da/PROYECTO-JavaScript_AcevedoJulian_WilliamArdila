@@ -90,8 +90,9 @@ llamadaApiEstudiantes.onreadystatechange = function () {
                 listaEstudiantes.innerHTML += `
                 <div class="estudiantes">
                     <p>${datosEstudiantes[i]["nombre"]}</p>
-                    <a href="">Editar</a>
-                    <a href="">Borrar</a>
+                    <p>${`id:${datosEstudiantes[i]["id"]}`}</p>
+                    <a href="#">Editar</a>
+                    <a href="#">Borrar</a>
                     
                     
                     
@@ -113,28 +114,61 @@ llamadaApiEstudiantes.send();
 const listaProfesores = document.getElementById("listaProfesores")
 
 let llamadaApiProfesores = new XMLHttpRequest();
-    llamadaApiProfesores.open("GET", "https://68a8a66bb115e67576e978b3.mockapi.io/profesores/datosProfesores")
-    llamadaApiProfesores.onreadystatechange = function(){
-        if(llamadaApiProfesores.readyState === 4 && llamadaApiProfesores.status === 200){
-            try{
-                let datosProfesores = JSON.parse(llamadaApiProfesores.responseText);
-                for (let i = 0; i < datosProfesores.length; i++) {
+llamadaApiProfesores.open("GET", "https://68a8a66bb115e67576e978b3.mockapi.io/profesores/datosProfesores")
+llamadaApiProfesores.onreadystatechange = function () {
+    if (llamadaApiProfesores.readyState === 4 && llamadaApiProfesores.status === 200) {
+        try {
+            let datosProfesores = JSON.parse(llamadaApiProfesores.responseText);
+            for (let i = 0; i < datosProfesores.length; i++) {
                 listaProfesores.innerHTML += `
                 <div class="profesores">
                     <p>${datosProfesores[i]["nombre"]}</p>
-                    <a href="">Editar</a>
-                    <a href="">Borrar</a>
+                    <p>${`id:${datosProfesores[i]["id"]}`}</p>
+                    <a href="#" class="editar">Editar</a>
+                    <a href="#" class="borrar "data-idProfesor="${datosProfesores[i]["id"]}">Borrar</a>
                     
                     
                     
                 </div>`
-            }
+
+
+
+
+
             }
 
-            catch(err){
+            let botonesDeBorrado = document.querySelectorAll(".borrar")
 
-                console.log(err.message);
-            }
+
+            botonesDeBorrado.forEach(function (boton) {
+                boton.addEventListener("click", function () {
+                    let llamadaApiProfesores = new XMLHttpRequest;
+                    llamadaApiProfesores.open("DELETE", `https://68a8a66bb115e67576e978b3.mockapi.io/profesores/datosProfesores/${boton.dataset.idprofesor}`);
+                    llamadaApiProfesores.onreadystatechange = function () {
+                        if (llamadaApiProfesores.readyState === 4) {
+                            if (llamadaApiProfesores.status === 200) {
+                                boton.parentElement.remove()
+                                alert("Profesor Eliminado");
+                               
+                            }
+                            else{alert("no")}
+                        }
+                    };
+
+
+                    llamadaApiProfesores.send();
+                })
+            })
+
+
+        }
+
+        catch (err) {
+
+            console.log(err.message);
         }
     }
-    llamadaApiProfesores.send();
+}
+llamadaApiProfesores.send();
+
+
