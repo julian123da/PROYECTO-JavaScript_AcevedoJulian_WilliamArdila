@@ -106,3 +106,35 @@ llamadaApiEstudiantes.onreadystatechange = function () {
     }
 }
 llamadaApiEstudiantes.send();
+
+
+// Crear o Borrar Profesor
+
+const listaProfesores = document.getElementById("listaProfesores")
+
+let llamadaApiProfesores = new XMLHttpRequest();
+    llamadaApiProfesores.open("GET", "https://68a8a66bb115e67576e978b3.mockapi.io/profesores/datosProfesores")
+    llamadaApiProfesores.onreadystatechange = function(){
+        if(llamadaApiProfesores.readyState === 4 && llamadaApiProfesores.status === 200){
+            try{
+                let datosProfesores = JSON.parse(llamadaApiProfesores.responseText);
+                for (let i = 0; i < datosProfesores.length; i++) {
+                listaProfesores.innerHTML += `
+                <div class="profesores">
+                    <p>${datosProfesores[i]["nombre"]}</p>
+                    <a href="">Editar</a>
+                    <a href="">Borrar</a>
+                    
+                    
+                    
+                </div>`
+            }
+            }
+
+            catch(err){
+
+                console.log(err.message);
+            }
+        }
+    }
+    llamadaApiProfesores.send();

@@ -33,7 +33,7 @@ if(escojerUsuario === "estudiante"){
 
 }
 
-// Inicio de sesion estudiantes
+// Inicio de sesion Profesores
 
 if(escojerUsuario === "profesor"){
     let contrasena = prompt("contraseña");

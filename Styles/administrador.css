@@ -101,3 +101,20 @@ h2 {
 .estudiantes p{
    width: 12px;
 }
+
+.profesores{
+    display: flex;
+    gap: 90px;
+    margin-top: 20px;
+   
+
+}
+
+.profesores p{
+   width: 100px;
+}
+
+.listaProfesores a{
+    text-decoration: none;
+    color: blue;
+}
