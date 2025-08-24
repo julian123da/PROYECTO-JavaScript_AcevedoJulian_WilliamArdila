@@ -55,13 +55,13 @@ h2 {
 
 .crearEstudiante h2 {
     margin-bottom: 20px;
-    
-  }
 
-  .crearEstudiante input {
+}
+
+.crearEstudiante input {
     padding: 10px;
     margin: 10px;
-  }
+}
 
 
 .crearProfesor {
@@ -75,46 +75,54 @@ h2 {
 
 .crearProfesor h2 {
     margin-bottom: 20px;
-    
-  }
 
-  .crearProfesor input {
+}
+
+.crearProfesor input {
     padding: 10px;
     margin: 10px;
-  }
+}
 
 
 
-.listaEstudiantes a{
+.listaEstudiantes a {
     text-decoration: none;
     color: blue;
 }
 
-.estudiantes{
+.estudiantes {
     display: flex;
     gap: 90px;
     margin-top: 20px;
-   
+
 
 }
 
-.estudiantes p{
-   width: 12px;
+.estudiantes p {
+    width: 12px;
 }
 
-.profesores{
+.profesores {
     display: flex;
     gap: 90px;
     margin-top: 20px;
-   
+
 
 }
 
-.profesores p{
-   width: 100px;
+.profesores p {
+    width: 100px;
 }
 
-.listaProfesores a{
+.listaProfesores a {
     text-decoration: none;
     color: blue;
+}
+
+.modalEstudiante {
+    position: fixed;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

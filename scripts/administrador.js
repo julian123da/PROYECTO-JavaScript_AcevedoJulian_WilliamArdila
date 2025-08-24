@@ -78,6 +78,8 @@ crearProfesor.addEventListener("click", function () {
 
 // Editar o Borrar estudiante
 
+
+
 const listaEstudiantes = document.getElementById("listaEstudiantes")
 
 let llamadaApiEstudiantes = new XMLHttpRequest();
@@ -91,13 +93,16 @@ llamadaApiEstudiantes.onreadystatechange = function () {
                 <div class="estudiantes">
                     <p>${datosEstudiantes[i]["nombre"]}</p>
                     <p>${`id:${datosEstudiantes[i]["id"]}`}</p>
-                    <a href="#">Editar</a>
+                    <a href="#" class="editarEstudiante" data-idEstudiantes="${datosEstudiantes[i]["id"]}">Editar</a>
                     <a href="#" class="borrarEstudiante" data-idEstudiantes="${datosEstudiantes[i]["id"]}">Borrar</a>
                     
                     
                     
                 </div>`
             }
+
+            // Borrar Estudiante
+
             let botonesDeBorradoEstudiantes = document.querySelectorAll(".borrarEstudiante")
 
 
@@ -110,15 +115,54 @@ llamadaApiEstudiantes.onreadystatechange = function () {
                             if (llamadaApiEstudiantes.status === 200) {
                                 botonEstudiante.parentElement.remove()
                                 alert("Estudiante Eliminado");
-                               
+
                             }
-                            else{alert("no")}
+                            else { alert("no") }
                         }
                     };
 
 
                     llamadaApiEstudiantes.send();
                 })
+
+            })
+
+            // Editar Estudiante
+
+            let botonesDeEditarEstudiantes = document.querySelectorAll(".editarEstudiante")
+            let cancelarEditarEstudiante = document.getElementById("cancelarEditarEstudiante")
+
+            botonesDeEditarEstudiantes.forEach(function (botonEditarEstudiante) {
+                botonEditarEstudiante.addEventListener("click", function () {
+                    document.querySelector(".modalEstudiante").style.display = "block"
+                    let actualizarEstudiante = document.getElementById("editarEstudiante")
+                    let inputNombreEstudiante = document.getElementById("inputActualizarNombreEstudiante")
+                    let inputCorreoEstudiante = document.getElementById("inputActualizarCorreoEstudiante")
+                    let inputClaveEstudiante = document.getElementById("inputActualizarClaveEstudiante")
+
+                    actualizarEstudiante.addEventListener("click", function () {
+                        let nuevoNombreEstudiante = inputNombreEstudiante.value
+                        let nuevoCorreoEstudiante = inputCorreoEstudiante.value
+                        let nuevoClaveEstudiante = inputClaveEstudiante.value
+                        let llamadaApiEstudiantes = new XMLHttpRequest;
+                        llamadaApiEstudiantes.open("PUT", `https://68a88e91a7e3ec06c2fc4249.mockapi.io/estudiantes/datosEstudiante/${botonEditarEstudiante.dataset.idestudiantes}`);
+                        llamadaApiEstudiantes.setRequestHeader("Content-Type", "application/json")
+                        let estudianteEditado = {
+                            "nombre": nuevoNombreEstudiante,
+                            "clave": nuevoClaveEstudiante,
+                            "correo": nuevoCorreoEstudiante
+                        }
+                        document.querySelector(".modalEstudiante").style.display = "none"
+                        alert("Estudiante Editado")
+
+                        llamadaApiEstudiantes.send(JSON.stringify(estudianteEditado));
+                    })
+
+                    cancelarEditarEstudiante.addEventListener("click", function () {
+                        document.querySelector(".modalEstudiante").style.display = "none"
+                    })
+                })
+
             })
         }
 
@@ -133,6 +177,8 @@ llamadaApiEstudiantes.send();
 
 // Editar o Borrar Profesor
 
+
+
 const listaProfesores = document.getElementById("listaProfesores")
 
 let llamadaApiProfesores = new XMLHttpRequest();
@@ -146,7 +192,7 @@ llamadaApiProfesores.onreadystatechange = function () {
                 <div class="profesores">
                     <p>${datosProfesores[i]["nombre"]}</p>
                     <p>${`id:${datosProfesores[i]["id"]}`}</p>
-                    <a href="#" class="editar">Editar</a>
+                    <a href="#" class="editarProfesor">Editar</a>
                     <a href="#" class="borrarProfesor" data-idProfesor="${datosProfesores[i]["id"]}">Borrar</a>
                     
                     
@@ -158,6 +204,8 @@ llamadaApiProfesores.onreadystatechange = function () {
 
 
             }
+
+            // Borrar Profesor
 
             let botonesDeBorradoProfesores = document.querySelectorAll(".borrarProfesor")
 
@@ -171,9 +219,9 @@ llamadaApiProfesores.onreadystatechange = function () {
                             if (llamadaApiProfesores.status === 200) {
                                 botonProfesor.parentElement.remove()
                                 alert("Profesor Eliminado");
-                               
+
                             }
-                            else{alert("no")}
+                            else { alert("no") }
                         }
                     };
 
@@ -181,6 +229,10 @@ llamadaApiProfesores.onreadystatechange = function () {
                     llamadaApiProfesores.send();
                 })
             })
+
+            // Editar Profesor
+
+            let botonesDeEditarProfesores = document.querySelectorAll(".editarProfesor")
 
 
         }
