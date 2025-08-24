@@ -154,3 +154,28 @@ h2 {
     padding: 10px;
     margin: 10px;
 }
+
+.listaCursos a {
+    text-decoration: none;
+    color: blue;
+}
+
+.cursos {
+    display: flex;
+    gap: 90px;
+    margin-top: 20px;
+
+
+}
+
+.cursos p {
+    width: 100px;
+}
+
+.modalCurso {
+    position: fixed;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

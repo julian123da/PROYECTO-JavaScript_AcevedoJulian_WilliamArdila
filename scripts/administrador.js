@@ -281,7 +281,6 @@ llamadaApiProfesores.send();
 
 // Crear curso
 
-// Crear estudiante
 
 const crearCurso = document.getElementById("crearCurso")
 let inputNombreCurso = document.getElementById("inputNombreCurso")
@@ -314,3 +313,100 @@ crearCurso.addEventListener("click", function () {
     llamadaApiCursos.send(JSON.stringify(nuevoCurso));
 
 })
+
+const listaCursos = document.getElementById("listaCursos")
+
+let llamadaApiCursos = new XMLHttpRequest();
+llamadaApiCursos.open("GET", "https://68ab6ec77a0bbe92cbb785f6.mockapi.io/listaCursos")
+llamadaApiCursos.onreadystatechange = function () {
+    if (llamadaApiCursos.readyState === 4 && llamadaApiCursos.status === 200) {
+        try {
+            let datosCursos = JSON.parse(llamadaApiCursos.responseText);
+            for (let i = 0; i < datosCursos.length; i++) {
+                listaCursos.innerHTML += `
+                <div class="cursos">
+                    <p>${datosCursos[i]["nombreCurso"]}</p>
+                    <p>${`id:${datosCursos[i]["id"]}`}</p>
+                    <a href="#" class="editarCursos" data-idCursos="${datosCursos[i]["id"]}">Editar</a>
+                    <a href="#" class="borrarCursos" data-idCursos="${datosCursos[i]["id"]}">Borrar</a>
+                    
+                    
+                    
+                </div>`
+
+
+
+
+
+            }
+
+            // Borrar Cursos
+
+            let botonesDeBorradoCursos = document.querySelectorAll(".borrarCursos")
+            
+
+            botonesDeBorradoCursos.forEach(function (botonCurso) {
+                botonCurso.addEventListener("click", function () {
+                    let llamadaApiCursos = new XMLHttpRequest;
+                    llamadaApiCursos.open("DELETE", `https://68ab6ec77a0bbe92cbb785f6.mockapi.io/listaCursos/${botonCurso.dataset.idcursos}`);
+                    llamadaApiCursos.onreadystatechange = function () {
+                        if (llamadaApiCursos.readyState === 4) {
+                            if (llamadaApiCursos.status === 200) {
+                                botonCurso.parentElement.remove()
+                                alert("Curso Eliminado");
+
+                            }
+                            else { alert("no") }
+                        }
+                    };
+
+
+                    llamadaApiCursos.send();
+                })
+            })
+
+            // Editar Curso
+
+            let botonesDeEditarCursos = document.querySelectorAll(".editarCursos")
+            let cancelarEditarCurso = document.getElementById("cancelarEditarCurso")
+
+            botonesDeEditarCursos.forEach(function (botonEditarCurso) {
+                botonEditarCurso.addEventListener("click", function () {
+                    document.querySelector(".modalCurso").style.display = "block"
+                    let actualizarCurso = document.getElementById("editarCurso")
+                    let inputNombreCurso = document.getElementById("inputActualizarNombreCurso")
+                    
+
+                    actualizarCurso.addEventListener("click", function () {
+                        let nuevoNombreCurso = inputNombreCurso.value
+                        let llamadaApiCursos = new XMLHttpRequest;
+                        llamadaApiCursos.open("PUT", `https://68ab6ec77a0bbe92cbb785f6.mockapi.io/listaCursos/${botonEditarCurso.dataset.idcursos}`);
+                        llamadaApiCursos.setRequestHeader("Content-Type", "application/json")
+                        let cursoEditado = {
+                            "nombreCurso": nuevoNombreCurso,
+                        
+                        }
+                        document.querySelector(".modalCurso").style.display = "none"
+                        alert("Curso Editado")
+
+                        llamadaApiCursos.send(JSON.stringify(cursoEditado));
+                    })
+
+                    cancelarEditarCurso.addEventListener("click", function () {
+                        document.querySelector(".modalCurso").style.display = "none"
+                    })
+                })
+
+            })
+
+
+        }
+
+        catch (err) {
+
+            console.log(err.message);
+        }
+    }
+}
+llamadaApiCursos.send();
+
