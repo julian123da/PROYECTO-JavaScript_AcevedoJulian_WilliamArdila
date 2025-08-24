@@ -76,7 +76,7 @@ crearProfesor.addEventListener("click", function () {
 
 })
 
-// Crear o Borrar estudiante
+// Editar o Borrar estudiante
 
 const listaEstudiantes = document.getElementById("listaEstudiantes")
 
@@ -92,12 +92,34 @@ llamadaApiEstudiantes.onreadystatechange = function () {
                     <p>${datosEstudiantes[i]["nombre"]}</p>
                     <p>${`id:${datosEstudiantes[i]["id"]}`}</p>
                     <a href="#">Editar</a>
-                    <a href="#">Borrar</a>
+                    <a href="#" class="borrarEstudiante" data-idEstudiantes="${datosEstudiantes[i]["id"]}">Borrar</a>
                     
                     
                     
                 </div>`
             }
+            let botonesDeBorradoEstudiantes = document.querySelectorAll(".borrarEstudiante")
+
+
+            botonesDeBorradoEstudiantes.forEach(function (botonEstudiante) {
+                botonEstudiante.addEventListener("click", function () {
+                    let llamadaApiEstudiantes = new XMLHttpRequest;
+                    llamadaApiEstudiantes.open("DELETE", `https://68a88e91a7e3ec06c2fc4249.mockapi.io/estudiantes/datosEstudiante/${botonEstudiante.dataset.idestudiantes}`);
+                    llamadaApiEstudiantes.onreadystatechange = function () {
+                        if (llamadaApiEstudiantes.readyState === 4) {
+                            if (llamadaApiEstudiantes.status === 200) {
+                                botonEstudiante.parentElement.remove()
+                                alert("Estudiante Eliminado");
+                               
+                            }
+                            else{alert("no")}
+                        }
+                    };
+
+
+                    llamadaApiEstudiantes.send();
+                })
+            })
         }
 
         catch (err) {
@@ -109,7 +131,7 @@ llamadaApiEstudiantes.onreadystatechange = function () {
 llamadaApiEstudiantes.send();
 
 
-// Crear o Borrar Profesor
+// Editar o Borrar Profesor
 
 const listaProfesores = document.getElementById("listaProfesores")
 
@@ -125,7 +147,7 @@ llamadaApiProfesores.onreadystatechange = function () {
                     <p>${datosProfesores[i]["nombre"]}</p>
                     <p>${`id:${datosProfesores[i]["id"]}`}</p>
                     <a href="#" class="editar">Editar</a>
-                    <a href="#" class="borrar "data-idProfesor="${datosProfesores[i]["id"]}">Borrar</a>
+                    <a href="#" class="borrarProfesor" data-idProfesor="${datosProfesores[i]["id"]}">Borrar</a>
                     
                     
                     
@@ -137,17 +159,17 @@ llamadaApiProfesores.onreadystatechange = function () {
 
             }
 
-            let botonesDeBorrado = document.querySelectorAll(".borrar")
+            let botonesDeBorradoProfesores = document.querySelectorAll(".borrarProfesor")
 
 
-            botonesDeBorrado.forEach(function (boton) {
-                boton.addEventListener("click", function () {
+            botonesDeBorradoProfesores.forEach(function (botonProfesor) {
+                botonProfesor.addEventListener("click", function () {
                     let llamadaApiProfesores = new XMLHttpRequest;
-                    llamadaApiProfesores.open("DELETE", `https://68a8a66bb115e67576e978b3.mockapi.io/profesores/datosProfesores/${boton.dataset.idprofesor}`);
+                    llamadaApiProfesores.open("DELETE", `https://68a8a66bb115e67576e978b3.mockapi.io/profesores/datosProfesores/${botonProfesor.dataset.idprofesor}`);
                     llamadaApiProfesores.onreadystatechange = function () {
                         if (llamadaApiProfesores.readyState === 4) {
                             if (llamadaApiProfesores.status === 200) {
-                                boton.parentElement.remove()
+                                botonProfesor.parentElement.remove()
                                 alert("Profesor Eliminado");
                                
                             }
