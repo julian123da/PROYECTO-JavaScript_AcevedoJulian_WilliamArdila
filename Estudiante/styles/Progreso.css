@@ -1,0 +1,164 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff; /* El fondo en la imagen es blanco */
+}
+
+.header {
+    background-color: #003A55;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_left {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.nav_item {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav_item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.user_icon {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.main_content {
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff; /* Igual que la imagen */
+}
+
+.page_title {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 50px;
+    font-weight: normal;
+}
+
+.progress_container { /* Corrigiendo el error: estaba mal escrito */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1200px; /* En lugar de min-width */
+    margin: 0 auto;
+}
+
+.progress_card { /* Corrigiendo el error: estaba escrito "progess" */
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: #e8e8e8; /* Fondo gris claro como en la imagen */
+}
+
+.progress_header {
+    color: white;
+    padding: 20px;
+    text-align: left; /* El texto en la imagen está alineado a la izquierda */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.progress_matematicas {
+    background-color: #2839E7;
+}
+
+.progress_quimica {
+    background-color: #D32F2F;
+}
+
+.progress_fisica {
+    background-color: #D62AA8;
+}
+
+.progress_geometria {
+    background-color: #03BCD4;
+}
+
+.progress_ingles {
+    background-color: #D6BD2A;
+
+}
+
+.progress_japones {
+    background-color: #24C924;
+}
+
+.progress_body {
+    padding: 10px;
+    background-color: #e8e8e8;
+}
+
+.progress_info {
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.progress_bar {
+    height: 6px;
+    background-color: #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress_fill {
+    height: 100%;
+    width: 50%;
+}
+
+.progress_fill_matematicas {
+    background-color: #201ACC;
+}
+
+.progress_fill_quimica {
+    background-color: #CC1A1A;
+}
+
+.progress_fill_fisica {
+    background-color: #CC1A8B;
+}
+
+.progress_fill_geometria {
+    background-color: #1ACCCC;
+}
+
+.progress_fill_ingles {
+    background-color: #CCB71A;
+}
+
+.progress_fill_japones {
+    background-color: #1ACC1A;
+}
