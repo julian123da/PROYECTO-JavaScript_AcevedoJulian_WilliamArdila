@@ -279,4 +279,38 @@ llamadaApiProfesores.onreadystatechange = function () {
 }
 llamadaApiProfesores.send();
 
+// Crear curso
 
+// Crear estudiante
+
+const crearCurso = document.getElementById("crearCurso")
+let inputNombreCurso = document.getElementById("inputNombreCurso")
+
+
+crearCurso.addEventListener("click", function () {
+    let nombreCurso = inputNombreCurso.value
+   
+
+    let llamadaApiCursos = new XMLHttpRequest;
+    llamadaApiCursos.open("POST", "https://68ab6ec77a0bbe92cbb785f6.mockapi.io/listaCursos");
+    llamadaApiCursos.setRequestHeader("Content-Type", "application/json");
+
+
+
+    let nuevoCurso= {
+        "nombreCurso": nombreCurso,
+    }
+
+    llamadaApiCursos.onreadystatechange = function () {
+        if (llamadaApiCursos.readyState === 4) {
+            if (llamadaApiCursos.status === 201) {
+                alert("Curso Creado");
+                inputNombreCurso.value = ""
+            
+            }
+        }
+    };
+
+    llamadaApiCursos.send(JSON.stringify(nuevoCurso));
+
+})
