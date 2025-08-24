@@ -83,3 +83,21 @@ h2 {
     margin: 10px;
   }
 
+
+
+.listaEstudiantes a{
+    text-decoration: none;
+    color: blue;
+}
+
+.estudiantes{
+    display: flex;
+    gap: 90px;
+    margin-top: 20px;
+   
+
+}
+
+.estudiantes p{
+   width: 12px;
+}

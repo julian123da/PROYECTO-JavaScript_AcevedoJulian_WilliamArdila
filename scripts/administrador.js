@@ -22,14 +22,14 @@ crearEstudiante.addEventListener("click", function () {
         "correo": correoEstudiante
     }
 
-    llamadaApiEstudiantes.onreadystatechange = function(){
+    llamadaApiEstudiantes.onreadystatechange = function () {
         if (llamadaApiEstudiantes.readyState === 4) {
             if (llamadaApiEstudiantes.status === 201) {
                 alert("Estudiante Creado");
                 inputNombreEstudiante.value = ""
                 inputCorreoEstudiante.value = ""
                 inputClaveEstudiante.value = ""
-            } 
+            }
         }
     };
 
@@ -61,14 +61,14 @@ crearProfesor.addEventListener("click", function () {
         "correo": correoProfesor
     }
 
-    llamadaApiProfesor.onreadystatechange = function(){
+    llamadaApiProfesor.onreadystatechange = function () {
         if (llamadaApiProfesor.readyState === 4) {
             if (llamadaApiProfesor.status === 201) {
                 alert("Profesor Creado");
                 inputNombreProfesor.value = ""
                 inputCorreoProfesor.value = ""
                 inputClaveProfesor.value = ""
-            } 
+            }
         }
     };
 
@@ -76,3 +76,33 @@ crearProfesor.addEventListener("click", function () {
 
 })
 
+// Crear o Borrar estudiante
+
+const listaEstudiantes = document.getElementById("listaEstudiantes")
+
+let llamadaApiEstudiantes = new XMLHttpRequest();
+llamadaApiEstudiantes.open("GET", "https://68a88e91a7e3ec06c2fc4249.mockapi.io/estudiantes/datosEstudiante")
+llamadaApiEstudiantes.onreadystatechange = function () {
+    if (llamadaApiEstudiantes.readyState === 4 && llamadaApiEstudiantes.status === 200) {
+        try {
+            let datosEstudiantes = JSON.parse(llamadaApiEstudiantes.responseText);
+            for (let i = 0; i < datosEstudiantes.length; i++) {
+                listaEstudiantes.innerHTML += `
+                <div class="estudiantes">
+                    <p>${datosEstudiantes[i]["nombre"]}</p>
+                    <a href="">Editar</a>
+                    <a href="">Borrar</a>
+                    
+                    
+                    
+                </div>`
+            }
+        }
+
+        catch (err) {
+
+            console.log(err.message);
+        }
+    }
+}
+llamadaApiEstudiantes.send();
