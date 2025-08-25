@@ -1,15 +1,15 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
 }
 
-.header{
+.header {
     background-color: #003A55;
     color: white;
     padding: 15px 30px;
@@ -17,30 +17,30 @@ body{
     align-items: center;
 }
 
-.nav_left{
+.nav_left {
     display: flex;
     gap: 150px;
     align-items: center;
 }
 
-.logo{
+.logo {
     font-size: 30px;
     font-weight: bold;
 }
 
-.nav_item{
+.nav_item {
     color: white;
     text-decoration: none;
     font-size: 30px;
 }
 
-.user_icon{
+.user_icon {
     width: 40px;
     height: 40px;
     margin-left: auto;
 }
 
-.user_icon_img{
+.user_icon_img {
     width: 100%;
     height: 100%;
     background-color: white;
@@ -51,13 +51,13 @@ body{
     cursor: pointer;
 }
 
-.main_content{
+.main_content {
     padding: 30px;
     display: flex;
     flex-direction: column;
 }
 
-.page_title{
+.page_title {
     font-size: 28px;
     color: #333;
     margin-bottom: 30px;
@@ -65,7 +65,7 @@ body{
     padding-bottom: 10px;
 }
 
-.course_container{
+.course_container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
@@ -74,7 +74,7 @@ body{
     padding: 20px;
 }
 
-.course_card{
+.course_card {
     background-color: white;
     border-radius: 8px;
     overflow: hidden;
@@ -83,7 +83,7 @@ body{
     justify-self: center;
 }
 
-.course_header{
+.course_header {
     color: white;
     padding: 20px;
     text-align: center;
@@ -91,43 +91,43 @@ body{
     font-weight: bold;
 }
 
-.course_matematicas{
+.course_matematicas {
     background-color: #201ACC;
 }
 
-.course_quimica{
+.course_quimica {
     background-color: #CC1A1A;
 }
 
-.course_fisica{
+.course_fisica {
     background-color: #CC1A8B;
 }
 
-.course_geometria{
+.course_geometria {
     background-color: #1ABACC;
 }
 
-.course_ingles{
+.course_ingles {
     background-color: #CCB71A;
 }
 
-.course_japones{
+.course_japones {
     background-color: #1ACC1A;
 }
 
-.course_body{
+.course_body {
     padding: center;
     background-color: #e8e8e8;
 }
 
-.course_info{
+.course_info {
     text-align: center;
     margin-bottom: 15px;
     color: #333;
     font-size: 16px;
 }
 
-.progress_bar{
+.progress_bar {
     height: 8px;
     background-color: #ddd;
     border-radius: 4px;
@@ -135,43 +135,43 @@ body{
     overflow: hidden;
 }
 
-.progress_fill_matematicas{
+.progress_fill_matematicas {
     height: 100%;
     background-color: #201ACC;
     width: 60%;
 }
 
-.progress_fill_quimica{
+.progress_fill_quimica {
     height: 100%;
     background-color: #CC1A1A;
     width: 60%;
 }
 
-.progress_fill_fisica{
+.progress_fill_fisica {
     height: 100%;
     background-color: #CC1A8B;
     width: 60%;
 }
 
-.progress_fill_geometria{
+.progress_fill_geometria {
     height: 100%;
     background-color: #1ABACC;
     width: 60%;
 }
 
-.progress_fill_ingles{
+.progress_fill_ingles {
     height: 100%;
     background-color: #CCB71A;
     width: 60%;
 }
 
-.progress_fill_japones{
+.progress_fill_japones {
     height: 100%;
     background-color: #1ACC1A;
     width: 60%;
 }
 
-.enter_button{
+.enter_button {
     background-color: #546581;
     color: white;
     border: none;
@@ -186,6 +186,6 @@ body{
     border-radius: 10PX;
 }
 
-.enter_button:hover{
+.enter_button:hover {
     background-color: #0C2752;
 }
