@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 50px 20px;
+}
+
+.modal_overlay{
+    width: 100%;
+    background-color: #f0f0f0;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.modal_container{
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal_header{
+    background-color: #e8e8e8;
+    padding: 20px 25px;
+    border-bottom: 1px solid #999;
+}
+
+.modal_title{
+    font-size: 20px;
+    font-weight: normal;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.subject_name{
+    font-size: 16px;
+    color: #1a73e8;
+    font-weight: normal;
+    margin-bottom: 3px;
+}
+
+.due_date{
+    font-size: 14px;
+    color: #d93025;
+    font-weight: normal;
+}
+
+.modal_content{
+    padding: 25px;
+    background-color: white;
+}
+
+.assigment_description{
+    margin-bottom: 25px;
+}
+
+.assigment_description p{
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    padding: 15px;
+    border: 1px solid #333;
+    background-color: white;
+    margin: 0;
+}
+
+.file_upload_section{
+    margin-bottom: 25px;
+}
+
+.upload_area{
+    background-color: #d3d3d3;
+    border-radius: 8px;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.upload_label{
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.file_link{
+    background-color: transparent;
+    border: none;
+    padding: 8px 0;
+    font-size: 13px;
+    color: #24458C;
+    word-break: break-all;
+    margin: 0 auto;
+    min-width: 500px;
+    line-height: 1.4;
+}
+
+.modal_actions{
+    padding: 20px 25px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    background-color: #fafafa;
+}
+
+.btn_cancel{
+    background-color: #d3d3d3;
+    color: #333;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: normal;
+    transition: background-color 0.3s;
+}
+
+.btn_cancel:hover {
+    background-color: #bbb;
+}
+
+.btn_submit{
+    background-color: #24458C;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: normal;
+    transition: background-color 0.3s;
+}
+
+.btn_submit:hover {
+    background-color: #24458C;
+}
