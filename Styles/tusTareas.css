@@ -19,6 +19,22 @@ header {
     width: 100%;
 }
 
+.icono {
+    width: 50px;
+
+}
+
+header a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+}
+
+h1 {
+    color: white;
+
+}
+
 .nav_left{
     display: flex;
     gap: 50px;

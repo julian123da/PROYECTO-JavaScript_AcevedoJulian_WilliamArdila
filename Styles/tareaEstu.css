@@ -226,3 +226,7 @@ h1 {
 .back_button:hover{
     background-color: #2E3A7A;
 }
+
+a{
+    text-decoration: none;
+}

@@ -23,7 +23,7 @@ llamadaApiCursos.onreadystatechange = function () {
           <div class="progress_bar">
               <div class="progress_fill_matematicas"></div>
           </div>
-          <button class="enter_button">Entrar</button>
+           <a href="./tareaEstu.html" class="enter_button">Entrar</a>
       </div>
   </div>
 `
@@ -33,6 +33,10 @@ llamadaApiCursos.onreadystatechange = function () {
 
 
             }
+
+            
+
+
 
 
 
@@ -54,3 +58,4 @@ llamadaApiCursos.onreadystatechange = function () {
     }
 }
 llamadaApiCursos.send();
+

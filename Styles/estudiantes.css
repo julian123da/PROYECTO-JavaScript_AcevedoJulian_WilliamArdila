@@ -184,7 +184,7 @@ h1 {
     width: 60%;
 }
 
-.enter_button{
+/*.enter_button{
     background-color: #546581;
     color: white;
     border: none;
@@ -197,8 +197,23 @@ h1 {
     margin-left: 50PX;
     margin-bottom: 20PX;
     border-radius: 10PX;
-}
+}*/
 
 .enter_button:hover{
     background-color: #0C2752;
+}
+
+.enter_button {
+    background-color: #546581;
+    color: white;
+    border: none;
+    padding: 12px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 70%;
+    font-size: 16px;
+    display: block;  
+    margin: 0 auto 20px auto; 
+    text-align: center; 
+    
 }
