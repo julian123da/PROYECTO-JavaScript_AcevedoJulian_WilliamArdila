@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Styles/administrador.css">
+</head>
+
+<div class="modalEstudiante">
+    <form class="crearEstudiante">
+        <h2>Actualizar Estudiante</h2>
+        <input type="text" placeholder="Nombre Estudiante" id="inputActualizarNombreEstudiante">
+        <input type="text" placeholder="Correo Estudiante" id="inputActualizarCorreoEstudiante">
+        <input type="password" placeholder="Clave Estudiante" id="inputActualizarClaveEstudiante">
+        <button id="editarEstudiante" type="button"> Actualizar </button>
+        <button id="cancelarEditarEstudiante" type="button"> cancelar </button>
+
+    </form>
+</div>
+
+<div class="modalProfesor">
+    <form class="crearProfesor">
+        <h2>Actualizar Profesor</h2>
+        <input type="text" placeholder="Nombre Profesor" id="inputActualizarNombreProfesor">
+        <input type="text" placeholder="Correo Profesor" id="inputActualizarCorreoProfesor">
+        <input type="password" placeholder="Clave Profesor" id="inputActualizarClaveProfesor">
+        <button id="editarProfesor" type="button"> Actualizar </button>
+        <button id="cancelarEditarProfesor" type="button"> cancelar </button>
+
+    </form>
+</div>
+
+<div class="modalCurso">
+    <form class="crearCurso">
+        <h2>Actualizar Curso</h2>
+        <input type="text" placeholder="Nombre Curso" id="inputActualizarNombreCurso">
+        <button id="editarCurso" type="button"> Actualizar </button>
+        <button id="cancelarEditarCurso" type="button"> cancelar </button>
+
+    </form>
+</div>
+
+
+
+
+<body>
+    <header class="header">
+        <h1>LMS</h1>
+        <a href="#">Panel</a>
+        <a href="#">Cursos</a>
+        <a href="#">Asignaciones</a>
+        <a href="#">Progreso</a>
+        <a href="#">Perfil</a>
+        <a href="../index.html">Cerrar Sesion</a>
+    </header>
+
+    <div class="crudEstudianteProfesor">
+        <div class="crudEstudiante">
+            <h2>CRUD Estudiante</h2>
+
+
+
+            <form class="crearEstudiante">
+                <h2>Crear Estudiante</h2>
+                <input type="text" placeholder="Nombre Estudiante" id="inputNombreEstudiante">
+                <input type="text" placeholder="Correo Estudiante" id="inputCorreoEstudiante">
+                <input type="password" placeholder="Clave Estudiante" id="inputClaveEstudiante">
+                <button id="crearEstudiante" type="button"> CREAR. </button>
+
+            </form>
+
+            <div class="actulizarEstudiante">
+                <h2>Editar datos o eliminar Estudiantes</h2>
+            </div>
+
+            <div class="listaEstudiantes" id="listaEstudiantes">
+
+
+            </div>
+
+
+        </div>
+
+        <div class="crudProfesor">
+            <h2>CRUD Profesor</h2>
+
+
+
+            <form class="crearProfesor">
+                <h2>Crear Profesor</h2>
+                <input type="text" placeholder="Nombre Profesor" id="inputNombreProfesor">
+                <input type="text" placeholder="Correo Profesor" id="inputCorreoProfesor">
+                <input type="password" placeholder="Clave Profesor" id="inputClaveProfesor">
+                <button id="crearProfesor" type="button"> CREAR. </button>
+
+            </form>
+
+            <div class="actulizarProfesor">
+                <h2>Editar datos o eliminar Profesor</h2>
+            </div>
+
+            <div class="listaProfesores" id="listaProfesores">
+
+
+            </div>
+
+             <form class="crearCurso">
+                <h2>Crear Curso</h2>
+                <input type="text" placeholder="Nombre Curso" id="inputNombreCurso">
+                <button id="crearCurso" type="button"> CREAR </button>
+
+            </form>
+
+            <div class="listaCursos" id="listaCursos">
+
+
+            </div>
+
+
+        </div>
+    </div>
+</body>
+<script src="../scripts/administrador.js"></script>
+
+</html>

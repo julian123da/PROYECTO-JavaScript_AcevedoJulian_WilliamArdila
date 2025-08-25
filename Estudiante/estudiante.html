@@ -1,96 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estudiantes</title>
-    <link rel="stylesheet" href="./styles/estudiante.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Styles/estudiantes.css">
 </head>
-<body>
 
-    
+<body>
     <header class="header">
-        <div class="nav_left">
-            <div class="logo">LMS</div>
-            <a href="#" class="nav_item">Panel</a>
-            <a href="#" class="nav_item">Cursos</a>
-            <a href="#" class="nav_item">Asignaciones</a>
-            <a href="#" class="nav_item">Progreso</a>
-            <a href="#" class="nav_item">Perfil</a>
-            <div class="user_icon">
-                <img src="./storage/icon.png" alt="">
-                </div>
-            </div>
-        
-        <div class="user_menu">
-            
-            <div class="user_dropdown">
-                <div class="user_name">Wiliam Santiago Pabon Ardila</div>
-                <a href="#" class="logout_link">Cerrar sesion</a>
-            </div>
-        </div>
+        <h1>LMS</h1>
+        <a href="#">Panel</a>
+        <a href="./estudiante.html">Cursos</a>
+        <a href="./tusTareas.html">Asignaciones</a>
+        <a href="./Progreso.html">Progreso</a>
+        <a href="./PerfilEstudiante.html">Perfil</a>
+        <a href="../index.html">Cerrar Sesion</a>
     </header>
 
-    <main class="main_content">
-        <h1 class="page_title">Panel</h1>
 
-        <div class="stats_container">
-            <div class="stat_card">
-                <div class="stat_title">Cursos activados</div>
-                <div class="stat_number">6</div>
-            </div>
-            <div class="stat_card">
-                <div class="stat_title">Asignaciones pendientes</div>
-                <div class="stat_number">6</div>
-            </div>
-            <div class="stat_card">
-                <div class="stat_title">Progreso general</div>
-                <div class="stat_number">50%</div>
-            </div>
-        </div>
+    <h1 class="page_title">Cursos</h1>
 
-        <div class="course_container">
+    <div class="course_container" id="tarjetasCursos">
 
-            <div class="course_card">
-                <div class="course_header course_matematicas">
-                    Matematicas
-                </div>
-                <div class="course_body">
-                    <div class="course_info">10 lecciones</div>
-                    <div class="progress_bar">
-                        <div class="progress_fill_matematicas"></div>
-                    </div>
-                    <button class="enter_button">Entrar</button>
-                </div>
-            </div>
-
-            <div class="course_card">
-                <div class="course_header course_japones">
-                    Japones
-                </div>
-                <div class="course_body">
-                    <div class="course_info">10 lecciones</div>
-                    <div class="progress_bar">
-                        <div class="progress_fill_japones"></div>
-                    </div>
-                    <button class="enter_button">Entrar</button>
-                </div>
-            </div>
+    </div>
 
 
-            <div class="course_card">
-                <div class="course_header course_quimica">
-                    Quimica
-                </div>
-                <div class="course_body">
-                    <div class="course_info">10 leccciones</div>
-                    <div class="progress_bar">
-                        <div class="progress_fill_quimica"></div>
-                    </div>
-                    <button class="enter_button">Entrar</button>
-                </div>
-            </div>
-        </div>
-    </main>
+
 </body>
+<script src="../scripts/estudiante.js"></script>
+
 </html>

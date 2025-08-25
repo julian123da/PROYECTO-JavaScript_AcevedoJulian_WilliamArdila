@@ -1,0 +1,182 @@
+[
+  {
+    "nombre": "Camila Torres",
+    "clave": "101",
+    "correo": "camilatorres@gmail.com",
+    "id": "1"
+  },
+  {
+    "nombre": "Laura Martínez",
+    "clave": "102",
+    "correo": "lauramartinez@gmail.com",
+    "id": "2"
+  },
+  {
+    "nombre": "María Gómez",
+    "clave": "103",
+    "correo": "mariagomez@gmail.com",
+    "id": "3"
+  },
+  {
+    "nombre": "Carlos López",
+    "clave": "104",
+    "correo": "carloslopez@gmail.com",
+    "id": "4"
+  },
+  {
+    "nombre": "Andrea Ruiz",
+    "clave": "105",
+    "correo": "andrearuiz@gmail.com",
+    "id": "5"
+  },
+  {
+    "nombre": "Daniel Fernández",
+    "clave": "106",
+    "correo": "danielfernandez@gmail.com",
+    "id": "6"
+  },
+  {
+    "nombre": "Miguel Castro",
+    "clave": "107",
+    "correo": "miguelcastro@gmail.com",
+    "id": "7"
+  },
+  {
+    "nombre": "Sofía Ramírez",
+    "clave": "108",
+    "correo": "sofiaramirez@gmail.com",
+    "id": "8"
+  },
+  {
+    "nombre": "José Pérez",
+    "clave": "109",
+    "correo": "joseperez@gmail.com",
+    "id": "9"
+  },
+  {
+    "nombre": "Isabella Herrera",
+    "clave": "110",
+    "correo": "isabellaherrera@gmail.com",
+    "id": "10"
+  },
+  {
+    "nombre": "Valentina Sánchez",
+    "clave": "111",
+    "correo": "valentinasanchez@gmail.com",
+    "id": "11"
+  },
+  {
+    "nombre": "Alejandro Díaz",
+    "clave": "112",
+    "correo": "alejandrodiaz@gmail.com",
+    "id": "12"
+  },
+  {
+    "nombre": "Catalina Jiménez",
+    "clave": "113",
+    "correo": "catalinajimenez@gmail.com",
+    "id": "13"
+  },
+  {
+    "nombre": "Sebastián Rojas",
+    "clave": "114",
+    "correo": "sebastianrojas@gmail.com",
+    "id": "14"
+  },
+  {
+    "nombre": "Jorge Castillo",
+    "clave": "115",
+    "correo": "jorgecastillo@gmail.com",
+    "id": "15"
+  },
+  {
+    "nombre": "Paula Vargas",
+    "clave": "116",
+    "correo": "paulavargas@gmail.com",
+    "id": "16"
+  },
+  {
+    "nombre": "Luis Navarro",
+    "clave": "117",
+    "correo": "luisnavarro@gmail.com",
+    "id": "17"
+  },
+  {
+    "nombre": "Ana Morales",
+    "clave": "118",
+    "correo": "anamorales@gmail.com",
+    "id": "18"
+  },
+  {
+    "nombre": "Gabriel Silva",
+    "clave": "119",
+    "correo": "gabrielsilva@gmail.com",
+    "id": "19"
+  },
+  {
+    "nombre": "Juliana Romero",
+    "clave": "120",
+    "correo": "julianaromero@gmail.com",
+    "id": "20"
+  },
+  {
+    "nombre": "Ricardo Peña",
+    "clave": "121",
+    "correo": "ricardopena@gmail.com",
+    "id": "21"
+  },
+  {
+    "nombre": "Mariana Ortiz",
+    "clave": "122",
+    "correo": "marianaortiz@gmail.com",
+    "id": "22"
+  },
+  {
+    "nombre": "Nicolás Mejía",
+    "clave": "123",
+    "correo": "nicolasmejia@gmail.com",
+    "id": "23"
+  },
+  {
+    "nombre": "Lauren Cárdenas",
+    "clave": "124",
+    "correo": "laurencardenas@gmail.com",
+    "id": "24"
+  },
+  {
+    "nombre": "Emilia Duarte",
+    "clave": "125",
+    "correo": "emiliaduarte@gmail.com",
+    "id": "25"
+  },
+  {
+    "nombre": "Pedro Molina",
+    "clave": "126",
+    "correo": "pedromolina@gmail.com",
+    "id": "26"
+  },
+  {
+    "nombre": "Mateo Cabrera",
+    "clave": "127",
+    "correo": "mateocabrera@gmail.com",
+    "id": "27"
+  },
+  {
+    "nombre": "Valeria Torres",
+    "clave": "128",
+    "correo": "valeriatorres@gmail.com",
+    "id": "28"
+  },
+  {
+    "nombre": "Tomás Álvarez",
+    "clave": "129",
+    "correo": "tomasalvarez@gmail.com",
+    "id": "29"
+  },
+  {
+    "nombre": "Fernanda Gil",
+    "clave": "130",
+    "correo": "fernandagil@gmail.com",
+    "id": "30"
+  }
+]

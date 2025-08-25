@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Jomolhari;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+    background-color: #00405c;
+    width: 100%;
+}
+
+.icono {
+    width: 50px;
+
+}
+
+header a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+}
+
+h1 {
+    color: white;
+
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.crudEstudianteProfesor {
+    display: flex;
+    margin-left: 23px;
+    gap: 120px;
+    justify-content: center;
+
+}
+
+
+.crearEstudiante {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    border: solid #00405c;
+    width: 300px;
+    text-align: center;
+}
+
+.crearEstudiante h2 {
+    margin-bottom: 20px;
+
+}
+
+.crearEstudiante input {
+    padding: 10px;
+    margin: 10px;
+}
+
+
+.crearProfesor {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    border: solid #00405c;
+    width: 300px;
+    text-align: center;
+}
+
+.crearProfesor h2 {
+    margin-bottom: 20px;
+
+}
+
+.crearProfesor input {
+    padding: 10px;
+    margin: 10px;
+}
+
+
+
+.listaEstudiantes a {
+    text-decoration: none;
+    color: blue;
+}
+
+.estudiantes {
+    display: flex;
+    gap: 90px;
+    margin-top: 20px;
+
+
+}
+
+.estudiantes p {
+    width: 12px;
+}
+
+.profesores {
+    display: flex;
+    gap: 90px;
+    margin-top: 20px;
+
+
+}
+
+.profesores p {
+    width: 100px;
+}
+
+.listaProfesores a {
+    text-decoration: none;
+    color: blue;
+}
+
+.modalEstudiante {
+    position: fixed;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modalProfesor {
+    position: fixed;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.crearCurso {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    border: solid #00405c;
+    width: 300px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.crearCurso h2 {
+    margin-bottom: 20px;
+
+}
+
+.crearCurso input {
+    padding: 10px;
+    margin: 10px;
+}
+
+.listaCursos a {
+    text-decoration: none;
+    color: blue;
+}
+
+.cursos {
+    display: flex;
+    gap: 90px;
+    margin-top: 20px;
+
+
+}
+
+.cursos p {
+    width: 100px;
+}
+
+.modalCurso {
+    position: fixed;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
