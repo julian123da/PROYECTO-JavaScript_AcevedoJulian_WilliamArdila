@@ -10,14 +10,29 @@ body {
     margin: 0;
 }
 
-.header {
-    background: #003A55;
-    color: white;
-    padding: 15px 30px;
+header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    gap: 2rem;
+    background-color: #00405c;
     width: 100%;
+}
+
+.icono {
+    width: 50px;
+
+}
+
+header a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+}
+
+h1 {
+    color: white;
+
 }
 
 .nav_left {
