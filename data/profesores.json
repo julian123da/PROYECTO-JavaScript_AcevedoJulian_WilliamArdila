@@ -1,0 +1,33 @@
+[
+  {
+    "nombre": "Julian Torres",
+    "clave": "9101",
+    "correo": "juliantorres@gmail.com",
+    "id": "1"
+  },
+  {
+    "nombre": "Ana Martínez",
+    "clave": "4821",
+    "correo": "ana.martinez@universidad.edu",
+    "id": "2"
+  },
+  {
+    "nombre": "Carlos Gómez",
+    "clave": "7352",
+    "correo": "carlos.gomez@universidad.edu",
+    "id": "3"
+  },
+  {
+    "nombre": "Laura Fernández",
+    "clave": "1597",
+    "correo": "laura.fernandez@universidad.edu",
+    "id": "4"
+  },
+  {
+    "nombre": "Ricardo López",
+    "clave": "8642",
+    "correo": "ricardo.lopez@universidad.edu",
+    "id": "5"
+  }
+]
+

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "nombreCurso": "Programación en JavaScript"
+  },
+  {
+    "id": "2",
+    "nombreCurso": "Historia Universal"
+  },
+  {
+    "id": "3",
+    "nombreCurso": "Inglés Intermedio"
+  },
+  {
+    "id": "4",
+    "nombreCurso": "Física General"
+  },
+  {
+    "id": "5",
+    "nombreCurso": "Bases de Datos SQL"
+  },
+  {
+    "nombreCurso": "Japones",
+    "id": "6"
+  }
+]
