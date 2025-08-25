@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.header {
+    background-color: #1a4d66;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_left {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.nav_item {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 0;
+}
+
+.nav_item:hover {
+    opacity: 0.8;
+}
+
+.user_icon {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+
+.main_content {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page_title {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+.info_section {
+    background-color: #d4d4d4;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.section_title {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.personal_info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.info_field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-width: 250px;
+}
+
+.field_label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.field_value {
+    background-color: #6b7a8a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    text-align: center;
+    min-width: 200px;
+    display: inline-block;
+}
+
+.location_row {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.location_field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+}
+
+.academic_info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.graduation_row {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.graduation_field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+}
+
+.stats_container {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.stat_card {
+    background-color: #6b7a8a;
+    color: white;
+    padding: 30px 40px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 180px;
+}
+
+.stat_number {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.stat_label {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.2;
+}
