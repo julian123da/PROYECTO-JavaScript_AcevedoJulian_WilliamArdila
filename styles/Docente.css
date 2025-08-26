@@ -99,6 +99,7 @@ h1 {
     color: #333;
     margin-bottom: 20px;
     font-weight: normal;
+    text-decoration: none;
 }
 
 .divider {
@@ -139,4 +140,37 @@ h1 {
     font-size: 16px;
     color: #333;
     font-weight: bold;
+}
+
+
+.modalListaTareas {
+    position: fixed;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.listaTareas {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    border: solid #00405c;
+    width: 300px;
+    text-align: center;
+}
+
+.listaTareas h2 {
+    margin-bottom: 20px;
+
+}
+
+.listaTareas input {
+    padding: 10px;
+    margin: 10px;
+}
+
+.eliminarTarea{
+    text-decoration: none;
+    color: blue;
 }

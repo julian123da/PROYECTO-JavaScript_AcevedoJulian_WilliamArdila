@@ -1,0 +1,50 @@
+[
+  {
+    "tipoTarea": "Proyecto",
+    "nombreTarea": "Proyecto sobre ecuaciones diferenciales",
+    "fechaTarea": "2025-08-26",
+    "id": "1"
+  },
+  {
+    "tipoTarea": "Examen Final",
+    "nombreTarea": "Examen final de cálculo diferencial",
+    "fechaTarea": "2025-08-27",
+    "id": "2"
+  },
+  {
+    "tipoTarea": "Taller",
+    "nombreTarea": "Taller de álgebra lineal",
+    "fechaTarea": "2025-08-28",
+    "id": "3"
+  },
+  {
+    "tipoTarea": "Quiz",
+    "nombreTarea": "Quiz de trigonometría",
+    "fechaTarea": "2025-08-29",
+    "id": "4"
+  },
+  {
+    "tipoTarea": "Parcial",
+    "nombreTarea": "Primer parcial de estadística",
+    "fechaTarea": "2025-08-30",
+    "id": "5"
+  },
+  {
+    "tipoTarea": "Proyecto",
+    "nombreTarea": "Proyecto de modelado matemático",
+    "fechaTarea": "2025-09-01",
+    "id": "6"
+  },
+  {
+    "tipoTarea": "Exposición",
+    "nombreTarea": "Exposición sobre geometría analítica",
+    "fechaTarea": "2025-09-02",
+    "id": "7"
+  },
+  {
+    "tipoTarea": "Examen",
+    "nombreTarea": "Examen de integrales",
+    "fechaTarea": "2025-09-03",
+    "id": "8"
+  }
+]
