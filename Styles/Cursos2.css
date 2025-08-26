@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.navbar {
+    background-color: #003A55;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    color: white;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    padding: 0 25px;
+    background-color: #003A55;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-left: 0;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0 25px;
+    font-size: 18px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.profile-icon {
+    padding: 0 30px;
+    font-size: 28px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.main-content {
+    padding: 100px 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px 60px;
+    justify-items: center;
+}
+
+.course-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    width: 300px;
+    height: 200px;
+    position: relative;
+}
+
+.course-header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.matematicas { background-color: #201ACC; }
+.quimica { background-color: #CC1A1A; }
+.fisica { background-color: #CC1A8B; }
+.geometria { background-color: #1ABACC; }
+.ingles { background-color: #CCB71A; }
+.japones { background-color: #1ACC1A; }
+
+.course-content {
+    padding: 20px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #E5E7EB;
+}
+
+.course-info {
+    color: #374151;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.course-students {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.course-teacher {
+    font-weight: 500;
+    color: #374151;
+}
+
+.enter-btn {
+    background-color: #0C2752;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.enter-btn:hover {
+    background-color: #1d4ed8;
+}
