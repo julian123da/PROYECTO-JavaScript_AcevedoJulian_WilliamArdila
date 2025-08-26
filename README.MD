@@ -24,3 +24,6 @@ Para ejecutar el proyecto se necesita:
 2. Abre el archivo index.html en el navegador con Live Server.  
 3. Comienza a navegar entre los diferentes modulos
 
+## Enlace del Figma
+
+https://www.figma.com/design/H7oNk2yvzcchdRZ5lPZVF7/Sin-t%C3%ADtulo?node-id=0-1&t=r40jRfCGffywWpB4-1

@@ -16,7 +16,6 @@ header {
 
 .icono {
     width: 50px;
-
 }
 
 header a {
@@ -27,7 +26,6 @@ header a {
 
 h1 {
     color: white;
-
 }
 
 h2 {
@@ -40,7 +38,6 @@ h2 {
     margin-left: 23px;
     gap: 120px;
     justify-content: center;
-
 }
 
 
@@ -64,7 +61,6 @@ h2 {
     margin: 10px;
 }
 
-
 .crearProfesor {
     background-color: #fff;
     padding: 30px 40px;
@@ -84,8 +80,6 @@ h2 {
     padding: 10px;
     margin: 10px;
 }
-
-
 
 .listaEstudiantes a {
     text-decoration: none;
