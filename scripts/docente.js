@@ -38,6 +38,8 @@ crearTareaBoton.addEventListener("click", function () {
         if (llamadoApiTareas.readyState === 4) {
             if (llamadoApiTareas.status === 201) {
                 alert("Tarea Creada")
+                modalListaTareas.style.display = "none"
+
     
 
             }
