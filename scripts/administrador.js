@@ -300,32 +300,7 @@ crearCurso.addEventListener("click", function () {
         "nombreCurso": nombreCurso,
     }
 
-    llamadaApiCursos.onreadystatechange = function () {
-        if (llamadaApiCursos.readyState === 4) {
-            if (llamadaApiCursos.status === 201) {
-                alert("Curso Creado");
-                inputNombreCurso.value = ""
-                tarjetasCursos.innerHTML += ` 
-            
-
-        
-            <div class="course_card">
-                <div class="course_header course_matematicas">
-                    <h1> "${nombreCurso}"
-                </div>
-                <div class="course_body">
-                    <div class="course_info">10 lecciones</div>
-                    <div class="progress_bar">
-                        <div class="progress_fill_matematicas"></div>
-                    </div>
-                    <button class="enter_button">Entrar</button>
-                </div>
-            </div>`
-
-
-            }
-        }
-    }
+   
 
     llamadaApiCursos.send(JSON.stringify(nuevoCurso));
 
