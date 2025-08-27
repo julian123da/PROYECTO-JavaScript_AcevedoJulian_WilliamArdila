@@ -27,3 +27,7 @@ Para ejecutar el proyecto se necesita:
 ## Enlace del Figma
 
 https://www.figma.com/design/H7oNk2yvzcchdRZ5lPZVF7/Sin-t%C3%ADtulo?node-id=0-1&t=r40jRfCGffywWpB4-1
+
+## Video del proyecto
+
+https://www.youtube.com/watch?v=w-7kqZMoD3I
